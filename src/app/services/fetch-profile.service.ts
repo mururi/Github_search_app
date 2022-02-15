@@ -21,4 +21,8 @@ export class FetchProfileService {
   fetchRepoData(){
     return this.http.get(`https://api.github.com/users/${this.username}/repos?${this.clientId}&client_secret=${this.clientSecret}`)
   }
+
+  updateProfile(username: string) {
+    this.username = username;
+  }
 }

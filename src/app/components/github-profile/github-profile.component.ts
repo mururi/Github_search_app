@@ -9,8 +9,14 @@ import { FetchProfileService } from 'src/app/services/fetch-profile.service';
 export class GithubProfileComponent implements OnInit {
   userProfile: any;
   userRepos: any;
+  username!: string;
 
   constructor(private fetchProfileService: FetchProfileService) {
+    
+  }
+
+  getProfile(){
+    this.fetchProfileService.updateProfile(this.username);
     this.fetchProfileService.fetchProfileData().subscribe(profile => {
       console.log(profile);
       this.userProfile = profile;
@@ -23,6 +29,7 @@ export class GithubProfileComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.username = 'mururi';
   }
 
 }

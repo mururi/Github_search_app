@@ -1,16 +1,22 @@
-<div *ngIf="userProfile">
-  <img src="{{userProfile.avatar_url}}" alt="">
-  <p>{{userProfile.name}}</p>
-  <p>{{userProfile.login}}</p>
-  <p *ngIf="userProfile.bio">{{userProfile.bio}}</p>
-  <p>Followers: {{userProfile.followers}}</p>
-  <p>Following: {{userProfile.following}}</p>
-</div>
-
-<div>
-  <h2>Repos</h2>
-  <div *ngFor="let repo of userRepos">
-    <p>{{repo.name}}</p>
-    <p>{{repo.description}}</p>
+<div class="container-md">
+  <form action="">
+    <input type="text" placeholder="Enter User Name" [(ngModel)]="username" name="username" (keyup)="getProfile()">
+  </form>
+  <div *ngIf="userProfile">
+    <img src="{{userProfile.avatar_url}}" alt="">
+    <p>{{userProfile.name}}</p>
+    <p>{{userProfile.login}}</p>
+    <p *ngIf="userProfile.bio">{{userProfile.bio}}</p>
+    <p>Followers: {{userProfile.followers}}</p>
+    <p>Following: {{userProfile.following}}</p>
+  </div>
+  
+  <div>
+    <h2>Repos</h2>
+    <div *ngFor="let repo of userRepos">
+      <p>{{repo.name}}</p>
+      <p>{{repo.description}}</p>
+    </div>
   </div>
 </div>
+
