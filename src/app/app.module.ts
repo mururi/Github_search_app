@@ -1,9 +1,11 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { GithubProfileComponent } from './components/github-profile/github-profile.component';
+import { FetchProfileService } from './services/fetch-profile.service';
 
 @NgModule({
   declarations: [
@@ -12,9 +14,10 @@ import { GithubProfileComponent } from './components/github-profile/github-profi
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [FetchProfileService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
