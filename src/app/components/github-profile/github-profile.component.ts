@@ -15,8 +15,8 @@ export class GithubProfileComponent implements OnInit {
     
   }
 
-  getProfile(){
-    this.fetchProfileService.updateProfile(this.username);
+  getProfile(username: string){
+    this.fetchProfileService.updateProfile(username);
     this.fetchProfileService.fetchProfileData().subscribe(profile => {
       console.log(profile);
       this.userProfile = profile;
@@ -29,7 +29,7 @@ export class GithubProfileComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.username = 'mururi';
+    this.getProfile('mururi');
   }
 
 }
