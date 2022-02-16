@@ -10,6 +10,7 @@ import { FetchProfileService } from './services/fetch-profile.service';
 import { HeaderComponent } from './components/header/header.component';
 import { GithubReposComponent } from './components/github-repos/github-repos.component';
 import { DaysCountPipe } from './pipes/days-count.pipe';
+import { HeadingStyleDirective } from './directives/heading-style.directive';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { DaysCountPipe } from './pipes/days-count.pipe';
     GithubProfileComponent,
     HeaderComponent,
     GithubReposComponent,
-    DaysCountPipe
+    DaysCountPipe,
+    HeadingStyleDirective
   ],
   imports: [
     BrowserModule,
