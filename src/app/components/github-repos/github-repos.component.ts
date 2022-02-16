@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FetchProfileService } from 'src/app/services/fetch-profile.service';
 
 @Component({
   selector: 'app-github-repos',
@@ -7,9 +8,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GithubReposComponent implements OnInit {
 
-  constructor() { }
+  userRepos: any;
+
+  constructor(private fetchProfileService: FetchProfileService) { }
+
+  getRepos() {
+    //this.fetchProfileService.updateProfile(username);
+    this.fetchProfileService.fetchRepoData().subscribe(repos => {
+      console.log(repos);
+      this.userRepos = repos;
+    });
+  }
 
   ngOnInit(): void {
+    this.getRepos();
   }
 
 }

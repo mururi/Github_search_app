@@ -1,1 +1,11 @@
-<p>github-repos works!</p>
+<div class="container-fluid py-5 wrapper">
+  <div class="container-md">
+    <div>
+      <h2>Repos</h2>
+      <div *ngFor="let repo of userRepos">
+        <p>{{repo.name}}</p>
+        <p>{{repo.description}}</p>
+      </div>
+    </div>
+  </div>
+</div>
