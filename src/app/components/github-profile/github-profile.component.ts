@@ -9,8 +9,7 @@ import { FetchProfileService } from 'src/app/services/fetch-profile.service';
 export class GithubProfileComponent implements OnInit {
   userProfile: any;
   userRepos: any;
-  username!: string;
-
+  
   constructor(private fetchProfileService: FetchProfileService) {
     
   }

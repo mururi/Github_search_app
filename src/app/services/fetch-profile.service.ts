@@ -1,25 +1,24 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class FetchProfileService {
-  private username: string;
-  private clientId = '7042017714e78256fa34';
-  private clientSecret = '82e9cae24002ac5291df133df04d6fa3af8e406a';
+  private username!: string;
 
   constructor(private http: HttpClient) {
-    console.log("Service is now ready!");
-    this.username = 'mururi';
+    // console.log("Service is now ready!");
+    // this.username = 'mururi';
   }
 
   fetchProfileData(){
-    return this.http.get(`https://api.github.com/users/${this.username}?${this.clientId}&client_secret=${this.clientSecret}`)
+    return this.http.get(`https://api.github.com/users/${this.username}?${environment.clientId}&client_secret=${environment.clientSecret}`)
   }
 
   fetchRepoData(){
-    return this.http.get(`https://api.github.com/users/${this.username}/repos?${this.clientId}&client_secret=${this.clientSecret}`)
+    return this.http.get(`https://api.github.com/users/${this.username}/repos?${environment.clientId}&client_secret=${environment.clientSecret}`)
   }
 
   updateProfile(username: string) {
