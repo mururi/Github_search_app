@@ -15,7 +15,7 @@ export class GithubReposComponent implements OnInit {
   getRepos() {
     //this.fetchProfileService.updateProfile(username);
     this.fetchProfileService.fetchRepoData().subscribe(repos => {
-      console.log(repos);
+      console.log(`Repos Component ${repos}`);
       this.userRepos = repos;
     });
   }

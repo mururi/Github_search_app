@@ -24,7 +24,7 @@ export class GithubProfileComponent implements OnInit {
     // });
 
     this.fetchProfileService.fetchRepoData().subscribe(repos => {
-      console.log(repos);
+      //console.log(repos);
       this.userRepos = repos;
     });
   }

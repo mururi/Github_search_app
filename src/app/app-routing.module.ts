@@ -5,7 +5,8 @@ import { GithubReposComponent } from './components/github-repos/github-repos.com
 
 const routes: Routes = [
   { path: 'profile', component: GithubProfileComponent },
-  { path: 'repos', component: GithubReposComponent }
+  { path: 'repos', component: GithubReposComponent },
+  { path: '', redirectTo:'profile', pathMatch: 'full' }
 ];
 
 @NgModule({
