@@ -7,11 +7,13 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { GithubProfileComponent } from './components/github-profile/github-profile.component';
 import { FetchProfileService } from './services/fetch-profile.service';
+import { HeaderComponent } from './header/header.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    GithubProfileComponent
+    GithubProfileComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
