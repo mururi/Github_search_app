@@ -8,12 +8,14 @@ import { AppComponent } from './app.component';
 import { GithubProfileComponent } from './components/github-profile/github-profile.component';
 import { FetchProfileService } from './services/fetch-profile.service';
 import { HeaderComponent } from './components/header/header.component';
+import { GithubReposComponent } from './components/github-repos/github-repos.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     GithubProfileComponent,
-    HeaderComponent
+    HeaderComponent,
+    GithubReposComponent
   ],
   imports: [
     BrowserModule,
