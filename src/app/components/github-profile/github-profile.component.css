@@ -1,21 +1,44 @@
 .wrapper {
   background-color: #212121;
   min-height: 100vh;
-  padding-top: 150px;
+  padding-top: 110px;
 }
 
 #username {
-  color: black;
+  color: #121212;
   border-radius: 20px 0 0 20px;
   border: none;
   min-height: 50px;
-  padding-left: 20px;  
+  padding-left: 20px;
+  box-shadow: 2px 2px 3px 1px #121212;
 }
 
 #submit {
-  background-color: black;
+  background-color: #121212;
   border-radius: 0 20px 20px 0;
   border: none;
   min-height: 50px;
   padding: 0 20px 0 20px;
+  color: #FAD958;
+}
+
+.box-shadow {
+  box-shadow: 2px 2px 3px 1px #121212;
+}
+
+h2 {
+  color:#FAD958;
+}
+
+h3 {
+  color: #43A0FF;
+}
+
+p span {
+  color: #7ECAC8;
+}
+
+.button {
+  background-color: #FF764C;
+  border-radius: 20px;
 }

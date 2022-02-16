@@ -2,10 +2,10 @@
   <div class="container-md">
     <div class="text-center">
       <div class="row justify-content-center">
-        <div class="col-lg-6 pb-5">
+        <div class="col-lg-6 pb-4">
           <form action="">
-            <input type="text" placeholder="Enter User Name" #username name="username" id="username">
-            <button type="submit" (click)="getProfile(username.value)" id="submit">Search User</button>
+            <input type="text" placeholder="Enter User Name" #username name="username" id="username" class="fs-4 box-shadow">
+            <button type="submit" (click)="getProfile(username.value)" id="submit" class="fs-4 fw-bolder box-shadow">Search User</button>
           </form>
         </div>
       </div>
@@ -14,16 +14,21 @@
     
     <div *ngIf="userProfile" class="text-center">
       <img src="{{userProfile.avatar_url}}" alt="" id="profile-img" class="rounded-circle pb-3">
-      <h2>{{userProfile.name}}</h2>
+      <h2 class="fw-bold mb-0">{{userProfile.name}}</h2>
       <h3>{{userProfile.login}}</h3>
-      <p *ngIf="userProfile.bio">{{userProfile.bio}}</p>
-      <p>Account Created {{userProfile.created_at|daysCount}} days ago</p>
+      <div class="row justify-content-center">
+        <div class="col-md-6">
+          <p *ngIf="userProfile.bio">{{userProfile.bio}}</p>
+        </div>
+      </div>
+      
+      <p>Account Created <span class="fw-bolder fs-4"> {{userProfile.created_at|daysCount}} </span> days ago</p>
       <div class="row justify-content-center">
         <div class="col-md-2">
-          <p>Followers: {{userProfile.followers}}</p>
+          <p appHeadingStyle>Followers: {{userProfile.followers}}</p>
         </div>
         <div class="col-md-2">
-          <p>Following: {{userProfile.following}}</p>
+          <p appHeadingStyle>Following: {{userProfile.following}}</p>
         </div>
       </div>
       
@@ -32,7 +37,7 @@
           <p>Public Repos: {{userProfile.public_repos}}</p>
         </div>
         <div class="col-md-3">
-          <button class="btn btn-primary" routerLink="../repos">See Github Repos</button>
+          <button class="btn button" routerLink="../repos">See Github Repos</button>
         </div>
       </div>   
       
