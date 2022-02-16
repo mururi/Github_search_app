@@ -1,8 +1,10 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import {  }
+import { GithubProfileComponent } from './components/github-profile/github-profile.component';
 
-const routes: Routes = [];
+const routes: Routes = [
+  { path: 'profile', component: GithubProfileComponent }
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
