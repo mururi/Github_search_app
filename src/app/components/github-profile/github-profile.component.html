@@ -13,12 +13,14 @@
     </div>
     
     <div *ngIf="userProfile" class="text-center">
-      <img src="{{userProfile.avatar_url}}" alt="">
-      <p>{{userProfile.name}}</p>
-      <p>{{userProfile.login}}</p>
+      <img src="{{userProfile.avatar_url}}" alt="" id="profile-img" class="rounded-circle pb-3">
+      <h2>{{userProfile.name}}</h2>
+      <h3>{{userProfile.login}}</h3>
       <p *ngIf="userProfile.bio">{{userProfile.bio}}</p>
+      <p>Account Created on: {{userProfile.created_at|date}}</p>
       <p>Followers: {{userProfile.followers}}</p>
       <p>Following: {{userProfile.following}}</p>
+      <p>Number of Public Repos: {{userProfile.public_repos}}</p>
     </div>
     
     <!-- <div>
