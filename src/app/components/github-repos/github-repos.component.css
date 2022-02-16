@@ -5,9 +5,22 @@
   padding-bottom: 50px;
 }
 
+h2 {
+  color: #43A0FF;
+}
+
+.button {
+  background-color: #7ECAC8;
+  border-radius: 20px;
+}
+
 .custom-card {
   background-color: #121212;
   border-radius: 10px;
   box-shadow: 2px 2px 3px 1px black;
-  padding: 20px 20px;
+  padding: 20px 30px;
+}
+
+.link {
+  color: #7ECAC8;
 }

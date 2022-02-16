@@ -4,10 +4,10 @@
     
       <div class="row justify-content-center">
         <div class="col-md-8">
-          <button class="btn btn-primary mb-4" routerLink="../profile">Back to Profile</button>
-          <h2>Repos</h2>
+          <button class="btn button fw-bolder mb-4" routerLink="../profile">Back to Profile</button>
+          <h2 class="fw-bold text-center">Public Repos</h2>
           <div *ngFor="let repo of userRepos" class="custom-card my-4">
-            <h4>{{repo.name}}</h4>
+            <h4 class="fw-bolder" appHeadingStyle>{{repo.name}}</h4>
             <p>{{repo.description}}</p>
 
             <div class="row justify-content-center">
@@ -16,7 +16,7 @@
               </div>
 
               <div class="col-sm-6 text-end">
-                <p><a href="{{repo.html_url}}" target="_blank">View on GitHub</a></p>
+                <p><a href="{{repo.html_url}}" target="_blank" class="text-decoration-none link fw-bolder">View on GitHub</a></p>
               </div>
             </div>
             
