@@ -7,9 +7,20 @@
           <button class="btn btn-primary mb-4" routerLink="../profile">Back to Profile</button>
           <h2>Repos</h2>
           <div *ngFor="let repo of userRepos" class="custom-card my-4">
-          <p>{{repo.name}}</p>
-          <p>{{repo.description}}</p>
-      </div>
+            <h4>{{repo.name}}</h4>
+            <p>{{repo.description}}</p>
+
+            <div class="row justify-content-center">
+              <div class="col-sm-6">
+                <p>Created on: {{repo.created_at}}</p>
+              </div>
+
+              <div class="col-sm-6 text-end">
+                <p><a href="{{repo.html_url}}" target="_blank">View on GitHub</a></p>
+              </div>
+            </div>
+            
+          </div>
         </div>
       </div>
       
