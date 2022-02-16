@@ -1,7 +1,20 @@
 .wrapper {
   background-color: #212121;
+  min-height: 100vh;
 }
 
 #username {
   color: black;
+  border-radius: 20px 0 0 20px;
+  border: none;
+  min-height: 50px;
+  padding-left: 20px;  
+}
+
+#submit {
+  background-color: black;
+  border-radius: 0 20px 20px 0;
+  border: none;
+  min-height: 50px;
+  padding: 0 20px 0 20px;
 }

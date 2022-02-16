@@ -1,13 +1,18 @@
 <div class="container-fluid py-5 wrapper">
   <div class="container-md">
     <div class="text-center">
-      <form action="">
-        <input type="text" placeholder="Enter User Name" #username name="username" id="username">
-        <button type="submit" (click)="getProfile(username.value)">Search User</button>
-      </form>
+      <div class="row justify-content-center">
+        <div class="col-lg-6 pb-5">
+          <form action="">
+            <input type="text" placeholder="Enter User Name" #username name="username" id="username">
+            <button type="submit" (click)="getProfile(username.value)" id="submit">Search User</button>
+          </form>
+        </div>
+      </div>
+      
     </div>
     
-    <div *ngIf="userProfile">
+    <div *ngIf="userProfile" class="text-center">
       <img src="{{userProfile.avatar_url}}" alt="">
       <p>{{userProfile.name}}</p>
       <p>{{userProfile.login}}</p>
@@ -16,12 +21,12 @@
       <p>Following: {{userProfile.following}}</p>
     </div>
     
-    <div>
+    <!-- <div>
       <h2>Repos</h2>
       <div *ngFor="let repo of userRepos">
         <p>{{repo.name}}</p>
         <p>{{repo.description}}</p>
       </div>
-    </div>
+    </div> -->
   </div>
 </div>
