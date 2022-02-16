@@ -9,13 +9,15 @@ import { GithubProfileComponent } from './components/github-profile/github-profi
 import { FetchProfileService } from './services/fetch-profile.service';
 import { HeaderComponent } from './components/header/header.component';
 import { GithubReposComponent } from './components/github-repos/github-repos.component';
+import { DaysCountPipe } from './pipes/days-count.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     GithubProfileComponent,
     HeaderComponent,
-    GithubReposComponent
+    GithubReposComponent,
+    DaysCountPipe
   ],
   imports: [
     BrowserModule,
