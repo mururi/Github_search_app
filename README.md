@@ -1,5 +1,5 @@
-# QuotesApp
-#### Github Search App, Feb 14 2022 
+# GitHub Search App
+#### GitHub Search App, Feb 14 2022 
 #### By **Dennis Kiboi** 
 ## Description
 This is an Angular web application that allows a user enter a GitHub username into a form, submit it, and see names and descriptions of that person's public repositories.
