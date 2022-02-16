@@ -1,6 +1,7 @@
 .wrapper {
   background-color: #212121;
   min-height: 100vh;
+  padding-top: 150px;
 }
 
 #username {
