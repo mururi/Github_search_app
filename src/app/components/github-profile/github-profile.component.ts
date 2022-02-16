@@ -16,10 +16,12 @@ export class GithubProfileComponent implements OnInit {
 
   getProfile(username: string){
     this.fetchProfileService.updateProfile(username);
-    this.fetchProfileService.fetchProfileData().subscribe(profile => {
-      console.log(profile);
-      this.userProfile = profile;
-    });
+    this.fetchProfileService.fetchProfileData();
+    this.userProfile = this.fetchProfileService.user;
+    // .subscribe(profile => {
+    //   console.log(profile);
+    //   this.userProfile = profile;
+    // });
 
     this.fetchProfileService.fetchRepoData().subscribe(repos => {
       console.log(repos);
